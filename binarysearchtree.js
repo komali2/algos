@@ -51,4 +51,20 @@ class binarySearchTree{
         }
     }
 
+    traverse(cb){
+        cb(this.value);
+        if(this.left){
+            this.left.traverse(cb);
+        }
+        if(this.right){
+            this.right.traverse(cb);
+        }
+    }
+
+    removeNode(val){
+        if(this.val === val){
+
+        }
+    }
+
 }

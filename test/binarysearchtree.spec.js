@@ -29,8 +29,8 @@ describe('Binary search tree', ()=>{
         expect(tree2.left.right.right.val).toBe(4);
     });
 
+    var tree3 = new binarySearchTree(50);
     it('should be able to search for values', ()=>{
-        var tree3 = new binarySearchTree(50);
         tree3.addNode(35);
         tree3.left.addNode(45);
         tree3.left.right.addNode(40);
@@ -52,5 +52,30 @@ describe('Binary search tree', ()=>{
         expect(tree3.contains(100)).toBe(false);
         expect(tree3.contains(51)).toBe(false);
         expect(tree3.contains(41)).toBe(false);
+    });
+
+    it('should place nodes properly', ()=>{
+        var tree4= new binarySearchTree(50);
+        tree4.addNode(60);
+        tree4.addNode(55);
+        tree4.addNode(57);
+        tree4.addNode(56);
+        tree4.addNode(54);
+        expect(tree4.contains(60)).toBe(true);
+        expect(tree4.contains(55)).toBe(true);
+        expect(tree4.contains(57)).toBe(true);
+        expect(tree4.contains(56)).toBe(true);
+        expect(tree4.contains(54)).toBe(true);
+        expect(tree4.contains(1)).toBe(false);
+    })
+
+    xit('should be able to remove nodes', ()=>{
+        tree3.removeNode(40);
+        tree3.removeNode(80);
+        tree3.removeNode(20);
+        expect(tree3.contains(40)).toBe(false);
+        expect(tree3.contains(80)).toBe(false);
+        expect(tree3.contains(20)).toBe(false);
+        
     });
 });
