@@ -1,0 +1,30 @@
+{
+  "name": "algos",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000a\u0000l\u0000g\u0000o\u0000s\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "dependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma": "^1.1.2"
+  },
+  "devDependencies": {
+    "karma": "^1.1.2",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/komali2/algos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/komali2/algos/issues"
+  },
+  "homepage": "https://github.com/komali2/algos#readme"
+}
