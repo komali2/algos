@@ -1,7 +1,7 @@
 class LinkedList {
-  constructor(node) {
-    this.head = node;
-    
+  constructor(val) {
+    this.head = new Node(val);
+    this.tail = this.head;
   }
 
   addFirst(val) {
@@ -10,9 +10,13 @@ class LinkedList {
     this.head.next = temp;
   }
 
-  
+  addLast(val){
+    let temp = this.tail;
+    this.tail = new Node(val);
+    temp.next = this.tail;
+  }
 
-  removeFromTail(){
+  removeLast(){
     let current = this.head;
     let prev;
     while(current.next){
