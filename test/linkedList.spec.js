@@ -17,7 +17,7 @@ describe('Linked List', () => {
   it('should have a functioning addLast method', () => {
     expect(list.addLast).toBeDefined();
     list.addLast(5);
-    expect(list.addLast()).toBe(5);
+    expect(list.getLast()).toBe(5);
   });
   //2, 3, 5
   it('should have a functioning getFirst method', () => {
@@ -43,20 +43,49 @@ describe('Linked List', () => {
   it('should have a functioning removeLast method', () => {
     expect(list.removeLast).toBeDefined();
     expect(list.removeLast()).toBe(9);
+    expect(list.getLast()).toBe(5);
     list.addLast(20);
     expect(list.getLast()).toBe(20);
   });
   //2, 3, 5, 20
   it('should have a functioning size method', () => {
-    expect(list.size).toBeDefined();
-    expect(list.size()).toBe(4);
-    list.addLast(50);
-    expect(list.size()).toBe(5);
-    list.addFirst(25);
-    expect(list.size()).toBe(6);
-    list.removeFirst();
-    expect(list.size()).toBe(5);
-    list.removeLast();
-    expect(list.size()).toBe(4);
+    let newList = new LinkedList(1);
+    expect(newList.size).toBeDefined();
+    newList.addFirst(2);
+    newList.addLast(5);
+    expect(newList.size()).toBe(3);
+    newList.removeFirst();
+    expect(newList.size()).toBe(2);
+    newList.addLast(7);
+    expect(newList.size()).toBe(3);
+    newList.addLast(8);
+    expect(newList.size()).toBe(4);
+    newList.addFirst(18);
+    expect(newList.size()).toBe(5);
+    newList.addFirst(23);
+    expect(newList.size()).toBe(6);
+    newList.removeFirst();
+    expect(newList.size()).toBe(5);
+    newList.removeFirst();
+    expect(newList.size()).toBe(4);
+    newList.removeLast();
+    expect(newList.size()).toBe(3);
+    newList.removeLast();
+    expect(newList.size()).toBe(2);
+    newList.removeLast();
+    expect(newList.size()).toBe(1);
+    newList.addFirst(24);
+    expect(newList.size()).toBe(2);
+    newList.removeFirst();
+    expect(newList.size()).toBe(1);
+    // expect(list.size()).toBe(4);
+    // list.addLast(50);
+    // expect(list.size()).toBe(5);
+    // list.addFirst(25);
+    // expect(list.size()).toBe(6);
+    // list.removeFirst();
+    // expect(list.size()).toBe(5);
+    // list.removeLast();
+    // expect(list.size()).toBe(4);
   });
 });
