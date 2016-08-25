@@ -78,14 +78,6 @@ describe('Linked List', () => {
     expect(newList.size()).toBe(2);
     newList.removeFirst();
     expect(newList.size()).toBe(1);
-    // expect(list.size()).toBe(4);
-    // list.addLast(50);
-    // expect(list.size()).toBe(5);
-    // list.addFirst(25);
-    // expect(list.size()).toBe(6);
-    // list.removeFirst();
-    // expect(list.size()).toBe(5);
-    // list.removeLast();
-    // expect(list.size()).toBe(4);
+
   });
 });
