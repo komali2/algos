@@ -3,14 +3,15 @@ var quicksort = function(array){
         return array;
     }
     
-    let pivot = Math.floor(array.length - 1);
-    let left = [];
-    let right = [];
+    //var pivot = Math.floor(array.length - 1);
+    var pivot = 0;
+    var left = [];
+    var right = [];
 
-    for(let i = 0; i < array.length; i++){
+    for(var i = 1; i < array.length; i++){
         if(array[i] < array[pivot]){
             left.push(array[i]);
-        } else if(array[i] > array[pivot]){
+        } else{
             right.push(array[i]);
         }
     }

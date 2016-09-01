@@ -15,6 +15,8 @@ describe('Quicksort', () => {
     expect(quicksort([1, 5, 3, 2, 4])).toEqual([1, 2, 3, 4, 5]);
     expect(quicksort([-1, -5, -4, -2, -3])).toEqual([-5, -4, -3, -2, -1]);
     expect(quicksort([0, 3, -5, 1, -1])).toEqual([-5, -1, 0, 1, 3]);
+    expect(quicksort([8,7,3,3,9,2,4,5,1])).toEqual([1,2,3,3,4,5,7,8,9]);
+    
   });
 
 });
