@@ -10,7 +10,6 @@ var pathChecker = function(board, path){
 function Board(matrix){
   this.board = matrix;
   this.getAdjacentPieces = function(row, col){
-    //board[row][col]
     var out = [];
     if(row > 0){
       out.push(this.board[row - 1][col]);
@@ -41,12 +40,3 @@ function Board(matrix){
     return nextMoves.indexOf(checkValue) !== -1;
   }
 }
-
-    var board = [
-      [1, 2, 3],
-      [4, 5, 6],
-      [7, 8, 9]
-    ];
-    var pathGood = [1, 4, 5];
-
-pathChecker(board, pathGood)
