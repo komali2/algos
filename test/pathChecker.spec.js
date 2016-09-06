@@ -2,9 +2,9 @@ describe('path checker', () => {
   it('should be defined', () => {
     expect(pathChecker).toBeDefined();
   });
-  // it('should return a bool', ()=>{
-  //   expect(pathChecker([[1, 2, 3],[2, 1, 3]], [3, 6, 5])).toEqual(false);
-  // })
+  it('should return a bool', ()=>{
+    expect(typeof(pathChecker([[1, 2, 3],[2, 1, 3]], [3, 6, 5]))).toEqual('boolean');
+  })
   it('should return true if a path exists', ()=>{
     var board = [
       [1, 2, 3],
