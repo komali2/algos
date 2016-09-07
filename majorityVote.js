@@ -1,5 +1,5 @@
 //objs:  Given objects and the function isSame(obj a, obj b) it   returns true iff a == b. Given an array of these objects, return the object that appears more than 50% (not more than or equal) of the time. If no such object exists, return NULL. 
-
+//nums: below
 var majorityVote = function (arr) {
   //eliminate all elements but one
   var count = 0;
