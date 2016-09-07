@@ -3,22 +3,26 @@
 var majorityVote = function (arr) {
   //eliminate all elements but one
   var count = 0;
-  var saved;
+  var candidate;
   arr.forEach((el) => {
     if (count === 0) {
-      saved = el;
+      candidate = el;
       count = 1;
     }
-    else if (el === saved) {
+    else if (el === candidate) {
       count++;
     }
     else{
       count--;
     }
-  })
+  });
 
-  //is remaining element good candidate for majority?
+  //determine if candidate is majority
+  count = 0;
+  arr.forEach((el)=>{
+    if(el === candidate){
+      count++;
+    }
+  });
+  return count > (arr.length / 2) ? candidate : -1;
 }
-
- input = [2,1,1,2,3,3,2,4,4,2,5,5];
- console.log(majorityVote(input));
