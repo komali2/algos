@@ -1,7 +1,7 @@
 var flattenArray = function(arr){
   var out = [];
   function recurse(anArray){
-    if(!Array.prototype.isArray(anArray)){
+    if(!Array.isArray(anArray)){
       out.push(anArray);
     } else{
       anArray.forEach((el)=>{
@@ -12,3 +12,4 @@ var flattenArray = function(arr){
   recurse(arr);
   return out;
 }
+
